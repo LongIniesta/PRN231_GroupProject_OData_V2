@@ -7,6 +7,7 @@ using Repositories.Interface;
 using Repositories;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using BusinessObjects;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BE_PRN231_CatDogLover.Controllers
 {
@@ -32,6 +33,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             postRepository = new PostRepository();
         }
 
+        [Authorize]
         [HttpGet]
         [EnableQuery]
         public ActionResult<List<ProductDTO>> GetProducts()
@@ -48,6 +50,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             return result;
         }
 
+        [Authorize]
         [HttpPut("[controller]")]
         public ActionResult UpdateProduct([FromBody] ProductDTO productDTO)
         {
@@ -65,6 +68,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             return Ok("Updated");
         }
 
+        [Authorize]
         [HttpDelete("[controller]")]
         public ActionResult DeleteProduct(string Id)
         {

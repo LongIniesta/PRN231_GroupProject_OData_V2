@@ -7,6 +7,7 @@ using Repositories.Interface;
 using Repositories;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using BusinessObjects;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BE_PRN231_CatDogLover.Controllers
 {
@@ -34,6 +35,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             postRepository = new PostRepository();
         }
 
+        [Authorize]
         [HttpGet]
         [EnableQuery]
         public ActionResult<List<ServiceSchedulerDTO>> GetServiceSchedulers()
@@ -50,6 +52,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             return result;
         }
 
+        [Authorize]
         [HttpPut("[controller]")]
         public ActionResult UpdateServiceScheduler([FromBody] ServiceSchedulerDTO serviceSchedulerDTO)
         {
@@ -71,6 +74,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             return Ok("Updated");
         }
 
+        [Authorize]
         [HttpDelete("[controller]")]
         public ActionResult DeleteScheduler(string Id)
         {

@@ -23,7 +23,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             categoryRepository = new CategoryRepository();
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpGet]
         [EnableQuery]
         public ActionResult<List<CategoryDTO>> GetCategories()

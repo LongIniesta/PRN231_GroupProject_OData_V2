@@ -34,6 +34,7 @@ namespace BE_PRN231_CarDogLover_OData.Controllers
             serviceSchedulerRepository = new ServiceSchedulerRepository();
         }
 
+        [Authorize]
         [HttpGet]
         [EnableQuery]
         public ActionResult<List<OrderDTO>> GetOrders()
@@ -50,8 +51,8 @@ namespace BE_PRN231_CarDogLover_OData.Controllers
             return result;
         }
 
-
-            [HttpPost("[controller]/Add")]
+        [Authorize(Roles = "user")]
+        [HttpPost("[controller]/Add")]
         public ActionResult<CategoryDTO> AddOrder([FromBody] OrderDTO orderDTO)
         {
             if (!accountRepository.GetAll().Any(a => a.AccountId == orderDTO.AccountId && a.Status == true)) return BadRequest("Not found seller account to order");

@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositorie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BE_PRN231_CarDogLover_OData", "BE_PRN231_CarDogLover_OData\BE_PRN231_CarDogLover_OData.csproj", "{2C543E78-EF8D-4EA9-A0C8-4D42DB5F4DD9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObjects", "D:\FA23\PRN231\BusinessObjects\BusinessObjects\BusinessObjects.csproj", "{8E4E77C6-051E-4BE8-896C-C1CE2EB985F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjects", "BusinessObjects\BusinessObjects.csproj", "{472C2A06-76A1-49D8-8F1B-A76BDE492AF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{2C543E78-EF8D-4EA9-A0C8-4D42DB5F4DD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C543E78-EF8D-4EA9-A0C8-4D42DB5F4DD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C543E78-EF8D-4EA9-A0C8-4D42DB5F4DD9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8E4E77C6-051E-4BE8-896C-C1CE2EB985F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E4E77C6-051E-4BE8-896C-C1CE2EB985F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E4E77C6-051E-4BE8-896C-C1CE2EB985F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E4E77C6-051E-4BE8-896C-C1CE2EB985F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{472C2A06-76A1-49D8-8F1B-A76BDE492AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472C2A06-76A1-49D8-8F1B-A76BDE492AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472C2A06-76A1-49D8-8F1B-A76BDE492AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472C2A06-76A1-49D8-8F1B-A76BDE492AF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

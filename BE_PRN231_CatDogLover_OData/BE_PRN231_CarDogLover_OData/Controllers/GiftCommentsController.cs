@@ -29,7 +29,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             postRepository = new PostRepository();  
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpGet]
         [EnableQuery]
         public ActionResult<List<GiftCommentDTO>> GetGiftComments()
@@ -47,7 +47,7 @@ namespace BE_PRN231_CatDogLover.Controllers
         }
 
 
-        [AllowAnonymous]
+        [Authorize(Roles = "user")]
         [HttpPost("[controller]")]
         public IActionResult PostGiftComment([FromBody] GiftCommentDTO giftCommentDTO)
         {
@@ -69,7 +69,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             }
             return Created("", result);
         }
-        [AllowAnonymous]
+        [Authorize]
         [HttpDelete("[controller]/{id}")]
         public IActionResult DeleteComment(int id)
         {
@@ -87,7 +87,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             return Ok("Deleted");
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = "user")]
         [HttpPut("[controller]/{id}")]
         public IActionResult UpdateComment(int id, string content)
         {
@@ -106,7 +106,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             return Ok("Updated");
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = "user")]
         [HttpPut("[controller]/Accept/{id}")]
         public IActionResult AcceptComment(int id)
         {

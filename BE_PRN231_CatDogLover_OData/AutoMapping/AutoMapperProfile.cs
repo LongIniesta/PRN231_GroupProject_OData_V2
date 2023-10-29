@@ -30,6 +30,7 @@ namespace AutoMapping
             CreateMap<Item, ItemDTO>().ReverseMap();
             CreateMap<React, ReactDTO>().ReverseMap();
             CreateMap<ReactType, ReactTypeDTO>().ReverseMap();
+            CreateMap<Report, ReportDTO>().ReverseMap();
 
             //Hiep
             CreateMap<AccountUpdateProfileRequest, Account>().ReverseMap();

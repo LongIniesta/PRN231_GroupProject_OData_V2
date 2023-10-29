@@ -27,7 +27,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             accountRepository = new AccountRepository();
             postRepository = new PostRepository();
         }
-        [Authorize(Roles = "admin")]
+        [Authorize]
         [HttpGet]
         [EnableQuery]
         public ActionResult<List<GiftDTO>> GetGifts()

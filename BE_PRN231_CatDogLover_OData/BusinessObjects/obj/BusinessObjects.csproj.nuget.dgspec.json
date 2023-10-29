@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {}
+    "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {}
   },
   "projects": {
-    "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
+    "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj",
+        "projectUniqueName": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj",
         "projectName": "BusinessObjects",
-        "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj",
+        "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj",
         "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\obj\\",
+        "outputPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -53,20 +53,6 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.24, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.24, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[6.0.0, )"
             }
           },
           "imports": [

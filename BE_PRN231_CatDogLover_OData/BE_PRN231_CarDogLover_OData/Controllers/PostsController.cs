@@ -33,7 +33,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             reactRepository = new ReactRepository();
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpGet]
         [EnableQuery]
         public ActionResult<List<PostDTO>> GetPosts(int accountId)
@@ -55,7 +55,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             return result;
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = "user")]
         [HttpPost("[controller]/Post")]
         public IActionResult UpLoadPost([FromBody] PostDTO postDTO)
         {
@@ -160,7 +160,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             return true;
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpPut("[controller]")]
         public IActionResult UpdatePost([FromBody] PostDTO postDTO) {
             if (postDTO.PostId == null) return BadRequest("Not found postId");
@@ -178,7 +178,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             return Ok("Updated");
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpPut("[controller]/Disable/{postId}")]
         public IActionResult DisablePost(int postId)
         {
@@ -197,7 +197,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             return Ok("Updated");
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpPut("[controller]/Enable/{postId}")]
         public IActionResult EnablePost(int postId)
         {
@@ -217,7 +217,7 @@ namespace BE_PRN231_CatDogLover.Controllers
         }
 
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpDelete("[controller]/{PostId}")]
         public IActionResult DeletePost(int PostId)
         {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\Repositories\\Repositories.csproj": {}
+    "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\Repositories\\Repositories.csproj": {}
   },
   "projects": {
-    "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\AutoMapping\\AutoMapping.csproj": {
+    "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\AutoMapping\\AutoMapping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\AutoMapping\\AutoMapping.csproj",
+        "projectUniqueName": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\AutoMapping\\AutoMapping.csproj",
         "projectName": "AutoMapping",
-        "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\AutoMapping\\AutoMapping.csproj",
+        "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\AutoMapping\\AutoMapping.csproj",
         "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\AutoMapping\\obj\\",
+        "outputPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\AutoMapping\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,14 +32,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
-                "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj"
+              "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
+                "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj"
               },
-              "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj": {
-                "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj"
-              },
-              "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj": {
-                "projectPath": "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj"
+              "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj": {
+                "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj"
               }
             }
           }
@@ -79,14 +76,14 @@
         }
       }
     },
-    "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
+    "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj",
+        "projectUniqueName": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj",
         "projectName": "BusinessObjects",
-        "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj",
+        "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj",
         "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\obj\\",
+        "outputPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -128,20 +125,6 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.24, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.24, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -164,14 +147,14 @@
         }
       }
     },
-    "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj": {
+    "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj",
+        "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DataAccess\\obj\\",
+        "outputPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -192,14 +175,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
-                "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj"
+              "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
+                "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj"
               },
-              "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj": {
-                "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj"
-              },
-              "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj": {
-                "projectPath": "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj"
+              "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj": {
+                "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj"
               }
             }
           }
@@ -233,14 +213,14 @@
         }
       }
     },
-    "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj": {
+    "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj",
+        "projectUniqueName": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj",
         "projectName": "DTOs",
-        "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj",
+        "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj",
         "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DTOs\\obj\\",
+        "outputPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DTOs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -261,11 +241,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
-                "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj"
-              },
-              "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj": {
-                "projectPath": "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj"
+              "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
+                "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj"
               }
             }
           }
@@ -299,14 +276,14 @@
         }
       }
     },
-    "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\Repositories\\Repositories.csproj": {
+    "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\Repositories\\Repositories.csproj",
+        "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\Repositories\\obj\\",
+        "outputPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -327,20 +304,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\AutoMapping\\AutoMapping.csproj": {
-                "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\AutoMapping\\AutoMapping.csproj"
+              "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\AutoMapping\\AutoMapping.csproj": {
+                "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\AutoMapping\\AutoMapping.csproj"
               },
-              "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
-                "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj"
+              "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
+                "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj"
               },
-              "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj"
+              "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj": {
-                "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj"
-              },
-              "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj": {
-                "projectPath": "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj"
+              "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj": {
+                "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj"
               }
             }
           }
@@ -354,77 +328,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj",
-        "projectName": "BusinessObjects",
-        "projectPath": "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj",
-        "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
-        "outputPath": "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\baolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.24, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.24, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

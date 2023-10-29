@@ -7,6 +7,7 @@ using Repositories.Interface;
 using Repositories;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using BusinessObjects;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BE_PRN231_CatDogLover.Controllers
 {
@@ -32,6 +33,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             postRepository = new PostRepository();
         }
 
+        [Authorize]
         [HttpGet]
         [EnableQuery]
         public ActionResult<List<ServiceDTO>> GetServices()
@@ -48,6 +50,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             return result;
         }
 
+        [Authorize]
         [HttpPut("[controller]")]
         public ActionResult UpdateService([FromBody] ServiceDTO serviceDTO)
         {
@@ -67,7 +70,8 @@ namespace BE_PRN231_CatDogLover.Controllers
             return Ok("Updated");
         }
 
-        [HttpDelete("[controller]")]
+        [Authorize]
+        [HttpDelete("[controller]")] 
         public ActionResult DeleteProduct(string Id)
         {
             Service sv = serviceRepository.GetAll().SingleOrDefault(p => p.ServiceId == Id);

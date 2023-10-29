@@ -1931,8 +1931,8 @@
     },
     "BusinessObjects/1.0.0": {
       "type": "project",
-      "path": "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj",
-      "msbuildProject": "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj"
+      "path": "../BusinessObjects/BusinessObjects.csproj",
+      "msbuildProject": "../BusinessObjects/BusinessObjects.csproj"
     },
     "DTOs/1.0.0": {
       "type": "project",
@@ -1953,11 +1953,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj",
+      "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DataAccess\\obj\\",
+      "outputPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1978,14 +1978,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
-              "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj"
+            "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj": {
+              "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\BusinessObjects\\BusinessObjects.csproj"
             },
-            "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj": {
-              "projectPath": "C:\\Users\\baolo\\OneDrive\\Desktop\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj"
-            },
-            "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj": {
-              "projectPath": "D:\\FA23\\PRN231\\BusinessObjects\\BusinessObjects\\BusinessObjects.csproj"
+            "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj": {
+              "projectPath": "D:\\FA23\\PRN231\\PRN231_GroupProject_OData_V2\\BE_PRN231_CatDogLover_OData\\DTOs\\DTOs.csproj"
             }
           }
         }

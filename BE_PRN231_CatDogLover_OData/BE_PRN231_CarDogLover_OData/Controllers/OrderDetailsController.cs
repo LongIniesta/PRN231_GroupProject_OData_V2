@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.OData.Query;
 using Repositories.Interface;
 using Repositories;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BE_PRN231_CatDogLover.Controllers
 {
@@ -29,6 +30,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             serviceSchedulerRepository = new ServiceSchedulerRepository();
         }
 
+        [Authorize]
         [HttpGet]
         [EnableQuery]
         public ActionResult<List<OrderDetailDTO>> GetOrderDetails()

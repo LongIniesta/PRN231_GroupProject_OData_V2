@@ -11,7 +11,6 @@
     <ProjectReference Include="..\BusinessObjects\BusinessObjects.csproj" />
     <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
     <ProjectReference Include="..\DTOs\DTOs.csproj" />
-    <ProjectReference Include="D:\FA23\PRN231\BusinessObjects\BusinessObjects\BusinessObjects.csproj" />
   </ItemGroup>
 
 </Project>

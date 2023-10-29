@@ -8,6 +8,7 @@ using DTOs;
 using Microsoft.AspNetCore.OData.Query;
 using BusinessObjects;
 using System.Diagnostics.Eventing.Reader;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BE_PRN231_CatDogLover.Controllers
 {
@@ -37,7 +38,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             reactRepository = new ReactRepository();
         }
 
-
+        [Authorize]
         [HttpGet]
         [EnableQuery]
         public ActionResult<List<ReactDTO>> GetReacts()
@@ -53,6 +54,8 @@ namespace BE_PRN231_CatDogLover.Controllers
             }
             return result;
         }
+
+        [Authorize(Roles = "user")]
         [HttpPost("[Controller]")]
         public ActionResult AddReact([FromBody] ReactDTO reactDTO)
         {
