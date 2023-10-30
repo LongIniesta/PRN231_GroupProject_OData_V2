@@ -32,7 +32,7 @@ namespace DataAccess
             Report result = null;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Reports.SingleOrDefault(u => u.ReportedPersonId == reportedPersonId && u.ReporterId == reporterId);
             }
             catch (Exception ex)
@@ -46,7 +46,7 @@ namespace DataAccess
             Report result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Reports.Add(Report).Entity;
                 DBContext.SaveChanges();
             }
@@ -63,7 +63,7 @@ namespace DataAccess
             Report Report = GetByID(reporterId, reportedPersonId);
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Reports.Remove(Report).Entity;
                 DBContext.SaveChanges();
             }
@@ -78,7 +78,7 @@ namespace DataAccess
             Report result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Reports.Update(Report).Entity;
                 DBContext.SaveChanges();
             }
@@ -94,7 +94,7 @@ namespace DataAccess
             List<Report> result = new List<Report>();
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Reports.ToList();
             }
             catch (Exception ex)

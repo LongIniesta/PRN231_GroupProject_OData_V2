@@ -32,7 +32,7 @@ namespace DataAccess
             Post result = null;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Posts.Include(p => p.Gifts).Include(p => p.Products).Include(p => p.Owner).Include(p => p.Services).Include(p => p.Reacts).SingleOrDefault(u => u.PostId == id);
             }
             catch (Exception ex)
@@ -49,7 +49,7 @@ namespace DataAccess
             Post result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 Post.Owner = null;
                 Post.Products = null;
                 Post.Services = null;
@@ -70,7 +70,7 @@ namespace DataAccess
             Post Post = GetByID(id);
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Posts.Remove(Post).Entity;
                 DBContext.SaveChanges();
             }
@@ -85,7 +85,7 @@ namespace DataAccess
             Post result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Posts.Update(Post).Entity;
                 DBContext.SaveChanges();
             }
@@ -101,7 +101,7 @@ namespace DataAccess
             List<Post> result = new List<Post>();
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Posts.Include(p => p.Gifts).Include(p =>p.Products).Include(p => p.Owner).Include(p => p.Services).Include(p => p.Reacts).ToList();
             }
             catch (Exception ex)

@@ -32,7 +32,7 @@ namespace DataAccess
             OrderDetail result = null;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.OrderDetails.SingleOrDefault(u => u.OrderDetailId == id);
             }
             catch (Exception ex)
@@ -48,7 +48,7 @@ namespace DataAccess
             OrderDetail result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.OrderDetails.Add(OrderDetail).Entity;
                 DBContext.SaveChanges();
             }
@@ -65,7 +65,7 @@ namespace DataAccess
             OrderDetail OrderDetail = GetByID(id);
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.OrderDetails.Remove(OrderDetail).Entity;
                 DBContext.SaveChanges();
             }
@@ -80,7 +80,7 @@ namespace DataAccess
             OrderDetail result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.OrderDetails.Update(OrderDetail).Entity;
                 DBContext.SaveChanges();
             }
@@ -96,7 +96,7 @@ namespace DataAccess
             List<OrderDetail> result = new List<OrderDetail>();
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.OrderDetails.Include(od => od.Item).Include(od => od.Item.Product).Include(od => od.Item.ServiceScheduler).AsNoTracking().ToList();
             }
             catch (Exception ex)

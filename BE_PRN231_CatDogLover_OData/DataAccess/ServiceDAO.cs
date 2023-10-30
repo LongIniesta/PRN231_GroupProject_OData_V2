@@ -32,7 +32,7 @@ namespace DataAccess
             Service result = null;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Services.SingleOrDefault(u => u.ServiceId == id);
             }
             catch (Exception ex)
@@ -44,7 +44,7 @@ namespace DataAccess
         private string getNewId()
         {
             string result = "SV";
-            var DBContext = new CatDogLoverContext();
+            var DBContext = new PRN231Context();
             if (DBContext.Services.Count() <= 0) result += "1";
             else
             {
@@ -60,7 +60,7 @@ namespace DataAccess
             Service result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 Service.ServiceId = getNewId();
                 Service.ServiceSchedulers = null;
                 result = DBContext.Services.Add(Service).Entity;
@@ -79,7 +79,7 @@ namespace DataAccess
             Service Service = GetByID(id);
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Services.Remove(Service).Entity;
                 DBContext.SaveChanges();
             }
@@ -94,7 +94,7 @@ namespace DataAccess
             Service result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Services.Update(Service).Entity;
                 DBContext.SaveChanges();
             }
@@ -110,7 +110,7 @@ namespace DataAccess
             List<Service> result = new List<Service>();
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Services.Include(p => p.Post).Include(p => p.Post.Owner).Include(p => p.ServiceSchedulers).ToList();
             }
             catch (Exception ex)

@@ -31,7 +31,7 @@ namespace DataAccess
             React result = null;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Reacts.SingleOrDefault(u => u.AccountId == AccountId && u.PostId == postId);
             }
             catch (Exception ex)
@@ -45,7 +45,7 @@ namespace DataAccess
             React result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Reacts.Add(React).Entity;
                 DBContext.SaveChanges();
             }
@@ -62,7 +62,7 @@ namespace DataAccess
             React React = GetByID(AccountId, postId);
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Reacts.Remove(React).Entity;
                 DBContext.SaveChanges();
             }
@@ -77,7 +77,7 @@ namespace DataAccess
             React result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Reacts.Update(React).Entity;
                 DBContext.SaveChanges();
             }
@@ -93,7 +93,7 @@ namespace DataAccess
             List<React> result = new List<React>();
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Reacts.ToList();
             }
             catch (Exception ex)

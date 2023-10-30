@@ -32,7 +32,7 @@ namespace DataAccess
             Gift result = null;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Gifts.Include(u => u.Post).SingleOrDefault(u => u.GiftId == id);
             }
             catch (Exception ex)
@@ -45,7 +45,7 @@ namespace DataAccess
         private string getNewId()
         {
             string result = "GF";
-            var DBContext = new CatDogLoverContext();
+            var DBContext = new PRN231Context();
             if (DBContext.Gifts.Count() <= 0) result += "1";
             else
             {
@@ -60,7 +60,7 @@ namespace DataAccess
             Gift result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 Gift.GiftId = getNewId();
                 result = DBContext.Gifts.Add(Gift).Entity;
                 DBContext.SaveChanges();
@@ -78,7 +78,7 @@ namespace DataAccess
             Gift Gift = GetByID(id);
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Gifts.Remove(Gift).Entity;
                 DBContext.SaveChanges();
             }
@@ -93,7 +93,7 @@ namespace DataAccess
             Gift result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Gifts.Update(Gift).Entity;
                 DBContext.SaveChanges();
             }
@@ -109,7 +109,7 @@ namespace DataAccess
             List<Gift> result = new List<Gift>();
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Gifts.ToList();
             }
             catch (Exception ex)

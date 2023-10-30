@@ -32,7 +32,7 @@ namespace DataAccess
             Account result = null;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Accounts.SingleOrDefault(u => u.AccountId == id);
             }
             catch (Exception ex)
@@ -48,7 +48,7 @@ namespace DataAccess
             Account result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Accounts.Add(Account).Entity;
                 DBContext.SaveChanges();
             }
@@ -65,7 +65,7 @@ namespace DataAccess
             Account Account = GetByID(id);
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Accounts.Remove(Account).Entity;
                 DBContext.SaveChanges();
             }
@@ -80,7 +80,7 @@ namespace DataAccess
             Account result;
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Accounts.Update(Account).Entity;
                 DBContext.SaveChanges();
             }
@@ -96,7 +96,7 @@ namespace DataAccess
             List<Account> result = new List<Account>();
             try
             {
-                var DBContext = new CatDogLoverContext();
+                var DBContext = new PRN231Context();
                 result = DBContext.Accounts.Include(a => a.Role).ToList();
             }
             catch (Exception ex)

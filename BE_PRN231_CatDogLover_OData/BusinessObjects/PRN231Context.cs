@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace BusinessObjects
 {
-    public partial class CatDogLoverContext : DbContext
+    public partial class PRN231Context : DbContext
     {
-        public CatDogLoverContext()
+        public PRN231Context()
         {
         }
 
-        public CatDogLoverContext(DbContextOptions<CatDogLoverContext> options)
+        public PRN231Context(DbContextOptions<PRN231Context> options)
             : base(options)
         {
         }
@@ -37,7 +37,7 @@ namespace BusinessObjects
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=prn231catdoglover.database.windows.net;Uid=PRN231;Pwd=Catdoglover!;Database=CatDogLover");
+                optionsBuilder.UseSqlServer("Server=tcp:prn231version2.database.windows.net,1433;Initial Catalog=PRN231;Persist Security Info=False;User ID=PRN231;Password=Catdoglover!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;");
             }
         }
 
@@ -75,9 +75,7 @@ namespace BusinessObjects
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
-                entity.Property(e => e.RefreshToken)
-                    .HasMaxLength(500)
-                    .IsUnicode(false);
+                entity.Property(e => e.RefreshToken).IsUnicode(false);
 
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.Accounts)
@@ -123,7 +121,7 @@ namespace BusinessObjects
                 entity.ToTable("GiftComment");
 
                 entity.Property(e => e.ApproveStatus)
-                    .HasMaxLength(30)
+                    .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Content).HasMaxLength(500);
@@ -156,7 +154,7 @@ namespace BusinessObjects
                     .IsUnicode(false);
 
                 entity.Property(e => e.ItemType)
-                    .HasMaxLength(10)
+                    .HasMaxLength(100)
                     .IsUnicode(false);
             });
 
@@ -172,15 +170,12 @@ namespace BusinessObjects
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.AccountId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Order__AccountId__02084FDA");
+                    .HasConstraintName("FK__Order__AccountId__02FC7413");
             });
 
             modelBuilder.Entity<OrderDetail>(entity =>
             {
                 entity.ToTable("OrderDetail");
-
-                entity.HasIndex(e => e.ItemId, "unique_itemIdOddt")
-                    .IsUnique();
 
                 entity.Property(e => e.ItemId)
                     .HasMaxLength(50)
@@ -195,15 +190,15 @@ namespace BusinessObjects
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.Item)
-                    .WithOne(p => p.OrderDetail)
-                    .HasForeignKey<OrderDetail>(d => d.ItemId)
+                    .WithMany(p => p.OrderDetails)
+                    .HasForeignKey(d => d.ItemId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__OrderDeta__ItemI__05D8E0BE");
+                    .HasConstraintName("FK__OrderDeta__ItemI__06CD04F7");
 
                 entity.HasOne(d => d.Order)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.OrderId)
-                    .HasConstraintName("FK__OrderDeta__Order__04E4BC85");
+                    .HasConstraintName("FK__OrderDeta__Order__05D8E0BE");
             });
 
             modelBuilder.Entity<Post>(entity =>
@@ -230,14 +225,11 @@ namespace BusinessObjects
             modelBuilder.Entity<Product>(entity =>
             {
                 entity.HasKey(e => new { e.ItemId, e.ProductId })
-                    .HasName("PK__Product__B93E4FE7D418D76E");
+                    .HasName("PK__Product__B93E4FE726D1C344");
 
                 entity.ToTable("Product");
 
-                entity.HasIndex(e => e.ProductId, "UQ__Product__B40CC6CC75D7B5F8")
-                    .IsUnique();
-
-                entity.HasIndex(e => e.ItemId, "unique_itemIdPro")
+                entity.HasIndex(e => e.ItemId, "UQ__Product__727E838A0EB89F18")
                     .IsUnique();
 
                 entity.Property(e => e.ItemId)
@@ -262,25 +254,25 @@ namespace BusinessObjects
                     .WithMany(p => p.Products)
                     .HasForeignKey(d => d.CategoryId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Product__Categor__778AC167");
+                    .HasConstraintName("FK__Product__Categor__787EE5A0");
 
                 entity.HasOne(d => d.Item)
                     .WithOne(p => p.Product)
                     .HasForeignKey<Product>(d => d.ItemId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Product__Status__787EE5A0");
+                    .HasConstraintName("FK__Product__ItemId__76969D2E");
 
                 entity.HasOne(d => d.Post)
                     .WithMany(p => p.Products)
                     .HasForeignKey(d => d.PostId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Product__PostId__76969D2E");
+                    .HasConstraintName("FK__Product__PostId__778AC167");
             });
 
             modelBuilder.Entity<React>(entity =>
             {
                 entity.HasKey(e => new { e.AccountId, e.PostId })
-                    .HasName("PK__React__AE3C83A7CAB93B9B");
+                    .HasName("PK__React__AE3C83A747684AD6");
 
                 entity.ToTable("React");
 
@@ -315,21 +307,20 @@ namespace BusinessObjects
 
             modelBuilder.Entity<Report>(entity =>
             {
-                entity.HasKey(e => new { e.ReporterId, e.ReportedPersonId })
-                    .HasName("PK__Report__47FD54A5EC581E43");
+                entity.HasNoKey();
 
                 entity.ToTable("Report");
 
                 entity.Property(e => e.Content).HasMaxLength(1000);
 
                 entity.HasOne(d => d.ReportedPerson)
-                    .WithMany(p => p.ReportReportedPeople)
+                    .WithMany()
                     .HasForeignKey(d => d.ReportedPersonId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Report__Reported__09A971A2");
 
                 entity.HasOne(d => d.Reporter)
-                    .WithMany(p => p.ReportReporters)
+                    .WithMany()
                     .HasForeignKey(d => d.ReporterId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Report__Reporter__08B54D69");
@@ -371,19 +362,19 @@ namespace BusinessObjects
 
             modelBuilder.Entity<ServiceScheduler>(entity =>
             {
-                entity.HasKey(e => new { e.ServiceId, e.ItemId, e.StartDate, e.EndDate })
-                    .HasName("PK__ServiceS__F497E3AB60FE9E8E");
+                entity.HasKey(e => new { e.ItemId, e.ServiceId, e.StartDate, e.EndDate })
+                    .HasName("PK__ServiceS__5884831240D448B0");
 
                 entity.ToTable("ServiceScheduler");
 
-                entity.HasIndex(e => e.ItemId, "unique_itemId")
+                entity.HasIndex(e => e.ItemId, "UQ__ServiceS__727E838AF1CD7EBD")
                     .IsUnique();
 
-                entity.Property(e => e.ServiceId)
+                entity.Property(e => e.ItemId)
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.ItemId)
+                entity.Property(e => e.ServiceId)
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
@@ -397,13 +388,13 @@ namespace BusinessObjects
                     .WithOne(p => p.ServiceScheduler)
                     .HasForeignKey<ServiceScheduler>(d => d.ItemId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__ServiceSc__Statu__7F2BE32F");
+                    .HasConstraintName("FK__ServiceSc__ItemI__7F2BE32F");
 
                 entity.HasOne(d => d.Service)
                     .WithMany(p => p.ServiceSchedulers)
                     .HasForeignKey(d => d.ServiceId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__ServiceSc__Servi__7E37BEF6");
+                    .HasConstraintName("FK__ServiceSc__Servi__00200768");
             });
 
             OnModelCreatingPartial(modelBuilder);
