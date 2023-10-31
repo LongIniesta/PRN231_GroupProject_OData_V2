@@ -307,20 +307,21 @@ namespace BusinessObjects
 
             modelBuilder.Entity<Report>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => new { e.ReportedPersonId, e.ReporterId })
+                    .HasName("PK__Report__9BF061AF1C00CB62");
 
                 entity.ToTable("Report");
 
                 entity.Property(e => e.Content).HasMaxLength(1000);
 
                 entity.HasOne(d => d.ReportedPerson)
-                    .WithMany()
+                    .WithMany(p => p.ReportReportedPeople)
                     .HasForeignKey(d => d.ReportedPersonId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Report__Reported__09A971A2");
 
                 entity.HasOne(d => d.Reporter)
-                    .WithMany()
+                    .WithMany(p => p.ReportReporters)
                     .HasForeignKey(d => d.ReporterId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Report__Reporter__08B54D69");
