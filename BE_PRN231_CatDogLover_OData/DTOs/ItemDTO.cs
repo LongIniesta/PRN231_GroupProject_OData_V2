@@ -1,6 +1,7 @@
 ﻿using BusinessObjects;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace DTOs
 {
     public class ItemDTO
     {
+        [Key]
         public string ItemId { get; set; } = null!;
         public string ItemType { get; set; } = null!;
 

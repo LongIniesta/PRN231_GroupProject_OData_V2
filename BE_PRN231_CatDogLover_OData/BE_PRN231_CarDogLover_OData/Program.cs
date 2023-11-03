@@ -93,6 +93,7 @@ static IEdmModel GetEdmModel()
     builder.EntitySet<ReactDTO>("Reacts");
     builder.EntityType<ReportDTO>().HasKey(r => r.ReporterId).HasKey(r => r.ReportedPersonId);
     builder.EntitySet<ReportDTO>("Reports");
+    builder.EntitySet<ItemDTO>("Items");
     return builder.GetEdmModel();
 }
 builder.Services.AddAuthorization(options =>

@@ -1,4 +1,6 @@
-﻿using Repositories.Interface;
+﻿using BusinessObjects;
+using DataAccess;
+using Repositories.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +11,6 @@ namespace Repositories
 {
     public class ItemRepository : IItemRepository
     {
+        public IEnumerable<Item> GetAll() => ItemDAO.Instance.GetAll();
     }
 }

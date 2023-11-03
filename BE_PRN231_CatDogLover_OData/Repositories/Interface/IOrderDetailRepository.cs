@@ -14,5 +14,6 @@ namespace Repositories.Interface
         OrderDetail RemoveOrderDetail(int id);
         OrderDetail UpdateOrderDetail(OrderDetail OrderDetail);
         IEnumerable<OrderDetail> GetAll();
+        List<OrderDetail> GetForSeller(int accountId);
     }
 }

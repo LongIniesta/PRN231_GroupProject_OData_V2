@@ -9,5 +9,6 @@ namespace Repositories.Interface
 {
     public interface IItemRepository
     {
+        IEnumerable<Item> GetAll();
     }
 }

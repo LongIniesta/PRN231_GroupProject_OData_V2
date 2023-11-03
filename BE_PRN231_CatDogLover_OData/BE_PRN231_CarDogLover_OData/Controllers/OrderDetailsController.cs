@@ -46,5 +46,22 @@ namespace BE_PRN231_CatDogLover.Controllers
             }
             return result;
         }
+
+        [Authorize]
+        [HttpGet("GetForSeller/{accountId}")]
+        [EnableQuery]
+        public ActionResult<List<OrderDetailDTO>> GetOrderDetailsForSeller(int accountId)
+        {
+            List<OrderDetailDTO> result;
+            try
+            {
+                result = mapper.Map<List<OrderDetailDTO>>(orderDetailRepository.GetForSeller(accountId).ToList());
+            }
+            catch (Exception ex)
+            {
+                return new BadRequestObjectResult(ex.Message);
+            }
+            return result;
+        }
     }
 }

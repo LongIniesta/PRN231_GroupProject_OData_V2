@@ -42,6 +42,23 @@ namespace DataAccess
             return result;
         }
 
+        public List<OrderDetail> GetForSeller(int accountId)
+        {
+            List<OrderDetail> result = null;
+            try
+            {
+                var DBContext = new PRN231Context();
+                List<string> list = DBContext.ServiceSchedulers.Include(s => s.Service).Include(s => s.Service.Post).Where(s => s.Service.Post.OwnerId == accountId).Select(s => s.ItemId).ToList();
+                list.AddRange(DBContext.Products.Include(p => p.Post).Where(p => p.Post.OwnerId == accountId).Select(p => p.ItemId).ToList());
+                result = DBContext.OrderDetails.Where(od => list.Any( l => l==od.ItemId)).Include(od => od.Item).Include(od => od.Item.Product).Include(od => od.Item.ServiceScheduler).AsNoTracking().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
 
         public OrderDetail AddOrderDetail(OrderDetail OrderDetail)
         {

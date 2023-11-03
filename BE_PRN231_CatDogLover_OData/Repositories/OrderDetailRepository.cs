@@ -17,6 +17,8 @@ namespace Repositories
 
         public OrderDetail GetByID(int id) => OrderDetailDAO.Instance.GetByID(id);
 
+        public List<OrderDetail> GetForSeller(int accountId) => OrderDetailDAO.Instance.GetForSeller(accountId);
+
         public OrderDetail RemoveOrderDetail(int id) => OrderDetailDAO.Instance.RemoveOrderDetail(id);
 
         public OrderDetail UpdateOrderDetail(OrderDetail OrderDetail) => OrderDetailDAO.Instance.UpdateOrderDetail(OrderDetail);
