@@ -43,5 +43,22 @@ namespace BE_PRN231_CatDogLover.Controllers
             }
             return result;
         }
+        [Authorize]
+        [HttpGet("GiftsGiven/{accountId}")]
+        [EnableQuery]
+        public ActionResult<List<GiftDTO>> GetGiftsGiven(int accountId)
+        {
+            List<GiftDTO> result;
+            try
+            {
+                result = mapper.Map<List<GiftDTO>>(giftRepository.GetGiftGiven(accountId));
+            }
+            catch (Exception ex)
+            {
+                return new BadRequestObjectResult(ex.Message);
+            }
+            return result;
+        }
+
     }
 }

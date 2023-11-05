@@ -14,5 +14,6 @@ namespace Repositories.Interface
         Gift RemoveGift(string id);
         Gift UpdateGift(Gift Gift);
         IEnumerable<Gift> GetAll();
+        IEnumerable<Gift> GetGiftGiven(int accountId);
     }
 }

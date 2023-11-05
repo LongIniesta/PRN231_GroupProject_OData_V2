@@ -42,6 +42,22 @@ namespace DataAccess
             return result;
         }
 
+        public IEnumerable<Gift> GetGiftGiven(int accountId)
+        {
+            List<Gift> result = null;
+            try
+            {
+                var DBContext = new PRN231Context();
+                List<string> listGiftId = DBContext.GiftComments.AsNoTracking().Where(g => g.AccountId == accountId && g.ApproveStatus == "accept").Select(g => g.GiftId).ToList();
+                result = DBContext.Gifts.AsNoTracking().Include(u => u.Post).Include(u => u.GiftComments).Where(u => listGiftId.Any(g => g == u.GiftId)).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
         private string getNewId()
         {
             string result = "GF";

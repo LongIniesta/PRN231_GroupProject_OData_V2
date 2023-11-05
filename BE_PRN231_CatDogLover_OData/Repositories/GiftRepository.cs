@@ -17,6 +17,8 @@ namespace Repositories
 
         public Gift GetByID(string id) => GiftDAO.Instance.GetByID(id);
 
+        public IEnumerable<Gift> GetGiftGiven(int accountId) => GiftDAO.Instance.GetGiftGiven(accountId);
+
         public Gift RemoveGift(string id) => GiftDAO.Instance.RemoveGift(id);
 
         public Gift UpdateGift(Gift Gift) => GiftDAO.Instance.UpdateGift(Gift);
