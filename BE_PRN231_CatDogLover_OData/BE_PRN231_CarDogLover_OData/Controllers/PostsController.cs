@@ -21,6 +21,7 @@ namespace BE_PRN231_CatDogLover.Controllers
         private IServiceRepository serviceRepository;
         private IServiceSchedulerRepository serviceSchedulerRepository;
         private IReactRepository reactRepository;
+        IAccountRepository accountRepository;
         public PostsController(IConfiguration configuration, IMapper mapper)
         {
             Configuration = configuration;
@@ -31,6 +32,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             serviceRepository = new ServiceRepository();
             serviceSchedulerRepository = new ServiceSchedulerRepository();
             reactRepository = new ReactRepository();
+            accountRepository = new AccountRepository();
         }
 
         [Authorize]
@@ -59,7 +61,12 @@ namespace BE_PRN231_CatDogLover.Controllers
         [HttpPost("[controller]/Post")]
         public IActionResult UpLoadPost([FromBody] PostDTO postDTO)
         {
-            if (!ModelState.IsValid) return BadRequest("Data invalid");
+            Account account = accountRepository.GetById(postDTO.OwnerId);
+            if (account == null) { 
+                return BadRequest("Not found owner of post");
+            }
+            if (account.Status == false) return BadRequest("Your account is baned (Can't upload post)");
+            if (account == null )
             postDTO.NumberOfReact = 0;
             if (postDTO.Type.ToLower() == "product")
             {

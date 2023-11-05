@@ -65,6 +65,8 @@ namespace BE_PRN231_CarDogLover_OData.Controllers
             if (reportDTO.ReportedPersonId == reportDTO.ReporterId) return BadRequest("Not reprot yourself");
             if (accountRepository.GetById(reportDTO.ReporterId) == null || accountRepository.GetById(reportDTO.ReportedPersonId) == null)
                 return BadRequest("Not found account");
+            if (accountRepository.GetById(reportDTO.ReporterId).RoleId != 3 || accountRepository.GetById(reportDTO.ReportedPersonId).RoleId != 3)
+                return BadRequest("Not found user");
             if (reportRepository.GetByID(reportDTO.ReporterId, reportDTO.ReportedPersonId) != null) return BadRequest("Not report 2 time!");
             try
             {

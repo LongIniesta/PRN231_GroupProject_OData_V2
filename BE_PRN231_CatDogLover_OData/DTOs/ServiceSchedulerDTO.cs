@@ -10,11 +10,19 @@ namespace DTOs
     public class ServiceSchedulerDTO
     {
         [Key]
+        [Required]
+        [MaxLength(50)]
         public string ItemId { get; set; } = null!;
+        [Required]
+        [MaxLength(50)]
         public string ServiceId { get; set; } = null!;
+        [Required]
         public decimal Price { get; set; }
+        [Required]
         public DateTime StartDate { get; set; }
+        [Required]
         public DateTime EndDate { get; set; }
+        [Required]
         public bool Status { get; set; }
     }
 }

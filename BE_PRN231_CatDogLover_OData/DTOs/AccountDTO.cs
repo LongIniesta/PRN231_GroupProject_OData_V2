@@ -13,12 +13,14 @@ namespace DTOs
         [Required]
         public int AccountId { get; set; }
         [Required]
+        [EmailAddress]
         public string Email { get; set; } = null!;
         [Required]
+        
         public string Password { get; set; } = null!;
         [Required]
         public string FullName { get; set; } = null!;
-        [BirthdayCustomer]
+
         public DateTime? DateOfBirth { get; set; }
         [Required]
         public int RoleId { get; set; }

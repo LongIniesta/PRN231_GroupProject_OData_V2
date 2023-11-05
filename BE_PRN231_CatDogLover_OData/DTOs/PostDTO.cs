@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTOs.ValidateCustom;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,11 +13,18 @@ namespace DTOs
     {
         [Key]
         public int? PostId { get; set; }
+        [Required]
+        [MaxLength(200)]
         public string Title { get; set; } = null!;
         public string? Content { get; set; }
+        [Required]
         public int OwnerId { get; set; }
+        [Required]
+        [TypePost]
         public string Type { get; set; } = null!;
+        [Required]
         public DateTime CreateDate { get; set; }
+        [Required]
         public bool Status { get; set; }
         public int? NumberOfReact { get; set; }
         public bool? Reacted { get; set; }

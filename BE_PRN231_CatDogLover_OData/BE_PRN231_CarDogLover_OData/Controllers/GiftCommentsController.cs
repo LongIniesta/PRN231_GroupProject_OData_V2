@@ -56,7 +56,9 @@ namespace BE_PRN231_CatDogLover.Controllers
             {
                 if (!giftRepository.GetAll().Any(g => g.GiftId == giftCommentDTO.GiftId && g.Status == true)) 
                     return BadRequest("Not found gift!");
-                if (!accountRepository.GetAll().Any(a => a.Status == true && a.AccountId == giftCommentDTO.AccountId && a.RoleId == 1)) return BadRequest("Not found user");
+                Account account  = accountRepository.GetById(giftCommentDTO.AccountId);
+                if (account == null || account.RoleId != 3) return BadRequest("Not found account to comment");
+                if (account.Status == false) return BadRequest("Account is baned (can't comment)");
                 if (giftCommentRepository.GetAll().Any(g => g.AccountId == giftCommentDTO.AccountId && g.GiftId == giftCommentDTO.GiftId)) return BadRequest("User comment already");
                 if (giftRepository.GetByID(giftCommentDTO.GiftId).Post.OwnerId == giftCommentDTO.AccountId) return BadRequest("Not comment in your post");
                 giftCommentDTO.ApproveStatus = "waiting";
