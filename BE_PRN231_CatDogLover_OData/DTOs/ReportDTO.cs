@@ -16,6 +16,7 @@ namespace DTOs
         [Required]
         public int ReportedPersonId { get; set; }
         [Required]
+        [MaxLength(1000)]
         public string? Content { get; set; }
 
         public virtual AccountDTO? ReportedPerson { get; set; } = null!;

@@ -116,6 +116,11 @@ namespace BE_PRN231_CatDogLover.Controllers
             {
                 GiftComment comment = giftCommentRepository.GetAll().SingleOrDefault(g => g.GiftCommentId == id);
                 if (comment == null) return BadRequest("Not found comment");
+                Gift gift = giftRepository.GetByID(comment.GiftId);
+                if (gift.Status == false) return BadRequest("Can't accept this comment. Gift is given already!");
+                gift.Status = false;
+                giftRepository.UpdateGift(gift);
+
                 comment.ApproveStatus = "accept";
                 giftCommentRepository.UpdateGiftComment(comment);
                 List<GiftComment> list = giftCommentRepository.GetAll().Where(g => g.GiftId == comment.GiftId && g.GiftCommentId != id).ToList();
@@ -123,9 +128,7 @@ namespace BE_PRN231_CatDogLover.Controllers
                     giftComment.ApproveStatus = "denied";
                     giftCommentRepository.UpdateGiftComment(giftComment);
                 }
-                Gift gift = giftRepository.GetByID(comment.GiftId);
-                gift.Status = false;
-                giftRepository.UpdateGift(gift);
+                
             }
             catch (Exception ex)
             {
