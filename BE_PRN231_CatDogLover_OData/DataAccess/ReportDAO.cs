@@ -1,4 +1,5 @@
 ﻿using BusinessObjects;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -95,7 +96,7 @@ namespace DataAccess
             try
             {
                 var DBContext = new PRN231Context();
-                result = DBContext.Reports.ToList();
+                result = DBContext.Reports.AsNoTracking().Include(r => r.Reporter).Include(r => r.ReportedPerson).ToList();
             }
             catch (Exception ex)
             {
