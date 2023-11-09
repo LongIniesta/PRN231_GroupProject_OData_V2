@@ -45,7 +45,7 @@ namespace BE_PRN231_CatDogLover.Controllers
             {
                 if (accountId != 0) {
                     List<React> reacts = reactRepository.GetAll().Where(r => r.AccountId == accountId).ToList();
-                    result = mapper.Map<List<PostDTO>>(postRepository.GetAll().ToList());
+                    result = mapper.Map<List<PostDTO>>(postRepository.GetAll().Where(p => p.Owner.Status == true).ToList());
                     result.Where(p => reacts.Any(r => r.PostId == p.PostId)).ToList().ForEach(p => p.Reacted = true);
                 } else 
                 result = mapper.Map<List<PostDTO>>(postRepository.GetAll().ToList());
